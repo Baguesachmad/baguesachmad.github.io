@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+<header class="header">
+  <div class="container nav">
 
-{% include header.html %}
+    <div class="logo">
+      <img src="https://i.ibb.co/rKqtQvBr/1000559582.png" class="logo-img">
+      <span>GoSmart Tools</span>
+    </div>
 
-<div class="container">
-  {{ content }}
-</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/checkout.html" class="cart-link">
+        <img src="https://i.ibb.co/zW3KWXmc/1000559584.png" class="cart-icon">
+        <span id="cart-count">0</span>
+      </a>
+    </nav>
 
-{% include footer.html %}
-
-<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
-</body>
-</html>
+  </div>
+</header>
