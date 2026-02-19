@@ -1,11 +1,31 @@
+---
+layout: default
+title: Store
+---
+
 <div class="hero-slider">
   <div class="slide active">
-    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=1600" />
+    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=1600">
   </div>
   <div class="slide">
-    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50c7f1d6?q=80&w=1600" />
+    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50c7f1d6?q=80&w=1600">
   </div>
-  <div class="slide">
-    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=1600" />
+</div>
+
+<h2 class="section-title">Produk Terbaru</h2>
+
+<div class="grid">
+  {% for product in site.data.products %}
+  <div class="card">
+    <img src="{{ product.image }}">
+    <div class="card-body">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <strong>Rp {{ product.price }}</strong>
+      <button onclick="addToCart('{{ product.name }}','{{ product.price }}','{{ product.description }}')">
+        Tambah ke Keranjang
+      </button>
+    </div>
   </div>
+  {% endfor %}
 </div>
