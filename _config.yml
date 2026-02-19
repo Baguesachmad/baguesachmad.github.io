@@ -1,8 +1,0 @@
-title: GoSmart Tools
-description: Platform Tools Digital Profesional
-baseurl: ""
-url: "https://yourusername.github.io"
-
-collections:
-  products:
-    output: true
