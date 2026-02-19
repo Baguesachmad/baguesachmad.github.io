@@ -1,15 +1,31 @@
 ---
-layout: null
+layout: default
+title: Home
 ---
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>GoSmart Tools</title>
-</head>
-<body>
-  <h1>GoSmart Tools Aktif 🚀</h1>
-  <p>Website berhasil jalan.</p>
-</body>
-</html>
+<h2>Marketplace</h2>
+
+<select id="categoryFilter">
+  <option value="All">Semua Kategori</option>
+  <option value="Tools">Tools</option>
+  <option value="Terapis">Terapis</option>
+  <option value="Jasa">Jasa</option>
+</select>
+
+<input type="text" id="searchInput" placeholder="Cari produk...">
+
+<div class="grid" id="productGrid">
+  {% for product in site.data.products %}
+  <div class="card"
+       data-name="{{ product.name }}"
+       data-category="{{ product.category }}">
+    <img src="{{ product.image }}" alt="{{ product.name }}">
+    <span class="badge">{{ product.category }}</span>
+    <h3>{{ product.name }}</h3>
+    <p>Rp {{ product.price }}</p>
+    <button onclick="addToCart('{{ product.name }}','{{ product.price }}')">
+      Checkout
+    </button>
+  </div>
+  {% endfor %}
+</div>
