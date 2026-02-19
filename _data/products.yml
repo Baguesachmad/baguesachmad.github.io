@@ -3,25 +3,15 @@
   category: Tools
   price: 25000
   image: https://via.placeholder.com/300x200
-  description: Generator meta tag SEO otomatis.
 
 - id: 2
-  name: AI Article Builder
-  category: Tools
-  price: 50000
-  image: https://via.placeholder.com/300x200
-  description: Generate artikel otomatis berbasis AI.
-
-- id: 3
   name: Konsultasi Terapi Relaksasi
   category: Terapis
   price: 150000
   image: https://via.placeholder.com/300x200
-  description: Sesi terapi relaksasi online 60 menit.
 
-- id: 4
+- id: 3
   name: Jasa Pembuatan Website
   category: Jasa
   price: 750000
   image: https://via.placeholder.com/300x200
-  description: Pembuatan website profesional.
