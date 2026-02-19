@@ -1,31 +1,11 @@
----
-layout: default
-title: Home
----
-
-<h2>Marketplace</h2>
-
-<select id="categoryFilter">
-  <option value="All">Semua</option>
-  <option value="Tools">Tools</option>
-  <option value="Terapis">Terapis</option>
-  <option value="Jasa">Jasa</option>
-</select>
-
-<input type="text" id="searchInput" placeholder="Cari produk...">
-
-<div class="grid">
-  {% for product in site.data.products %}
-  <div class="card"
-       data-name="{{ product.name }}"
-       data-category="{{ product.category }}">
-    <img src="{{ product.image }}" alt="{{ product.name }}">
-    <span class="badge">{{ product.category }}</span>
-    <h3>{{ product.name }}</h3>
-    <p>Rp {{ product.price }}</p>
-    <button onclick="addToCart('{{ product.name }}','{{ product.price }}')">
-      Checkout
-    </button>
+<div class="hero-slider">
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=1600" />
   </div>
-  {% endfor %}
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50c7f1d6?q=80&w=1600" />
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=1600" />
+  </div>
 </div>
