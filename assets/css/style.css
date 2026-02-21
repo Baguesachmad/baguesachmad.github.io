@@ -1,0 +1,6 @@
+body { font-family: sans-serif; margin:0; padding:0; }
+header { text-align:center; padding:20px; background:#d63384; color:#fff; }
+.product-card { border:1px solid #ccc; padding:16px; margin:16px; text-align:center; display:inline-block; width:220px; vertical-align:top; }
+.product-card img { width:100%; max-width:200px; height:auto; }
+button { background:#007bff; color:#fff; padding:8px 16px; border:none; cursor:pointer; margin-top:8px; }
+button:hover { opacity:0.9; }
