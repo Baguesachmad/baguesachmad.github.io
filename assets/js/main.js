@@ -14,7 +14,7 @@ fetch('data/products.json')
         <button class="snipcart-add-item"
                 data-item-id="${prod.id}"
                 data-item-price="${prod.price}"
-                data-item-url="product.html"
+                data-item-url="index.html"
                 data-item-name="${prod.name}">
           Beli Sekarang
         </button>
