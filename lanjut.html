@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- <script type='text/javascript' src='//smallbruisedfollowing.com/1b/58/e0/1b58e064ff7d9ec3a91c272ef1177353.js'></script> -->
+    <script src="https://fpyf8.com/88/tag.min.js" data-zone="168043" async data-cfasync="false"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XZ24YY21V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3XZ24YY21V');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safelink Converter</title>
+<script src="https://fpyf8.com/88/tag.min.js" data-zone="168043" async data-cfasync="false"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        #countdown {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #timer {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Styling dasar untuk tombol */
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .warning-message {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Link Tujuan Anda</h1>
+        <div class="warning-message">
+            Bab selanjutnya berisi tema dan bahasa yang mungkin tidak sesuai untuk semua usia. Pastikan anda sudah cukup umur.
+        </div>
+        <div id="countdown">Tunggu <span id="timer">10</span> detik...</div>
+        <a href="#" id="redirectButton" style="display:none;" class="button">Klik Untuk Melanjutkan!</a>
+    </div>
+
+    <script>
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Ambil URL tujuan dari parameter 'url'
+        let targetUrl = getQueryParam('url');
+        // Ambil fragment (hash) dari URL saat ini
+        const fragment = window.location.hash; // Ini akan mengembalikan '#lanjut' atau ''
+
+        const redirectButton = document.getElementById('redirectButton');
+        const countdownDiv = document.getElementById('countdown');
+        const timerSpan = document.getElementById('timer');
+
+        let timeLeft = 10; // Waktu countdown dalam detik
+
+        if (targetUrl) {
+            // Gabungkan targetUrl dengan fragment (jika ada)
+            if (fragment) {
+                targetUrl += fragment;
+            }
+            redirectButton.href = decodeURIComponent(targetUrl); // Decode URL jika ada karakter khusus
+
+            const countdownInterval = setInterval(() => {
+                timeLeft--;
+                timerSpan.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownDiv.style.display = 'none'; // Sembunyikan div hitungan mundur
+                    redirectButton.style.display = 'block'; // Tampilkan tombol
+                }
+            }, 1000); // Setiap 1 detik
+        } else {
+            countdownDiv.innerHTML = "Link tidak valid. Pastikan Anda memiliki parameter 'url' di URL.";
+            countdownDiv.style.color = "#dc3545"; // Warna merah untuk pesan error
+        }
+    </script>
+</body>
+</html>
